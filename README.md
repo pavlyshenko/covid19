@@ -1,3 +1,3 @@
-# coronavirus
-### sdgdfgdfg
-fgdfgdg $feg_a$
+# Bayesian Model for COVID-19 Spread Prediction
+For the predictive analytics of coronavirus spread, we used a logistic curve model.
+ The data for the analysis were taken from Kaggle competition <a href='https://www.kaggle.com/c/covid19-global-forecasting-week-2'>COVID19 Global Forecasting (Week 2)'</a> .  Bayesian inference makes it possible to obtain probability density functions for model parameters and estimate the uncertainty that is important in the risk assessment analytics. In Bayesian regression approach, we can take into account expert opinions via information prior distribution. For Bayesian inference calculations, we used python pystan package. New historical data will correct the distributions for model parameters and forecasting results. In the practical analytics, it is important to find the maximum of coronavirus cases per day, this point means  estimated half time of coronavirus spread in the region under investigation. More info about obtained results is here.
