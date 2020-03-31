@@ -18,9 +18,6 @@ sns.set()
 # fields names:
 region_field, cases_field,fatalities_field='region','cases','deaths'
 
-# Directory for images
-img_dir='imgs'
-
 # Normalization coefficients
 target_field_norm_coef=1/100000
 time_var_norm_coef=1/7
@@ -81,7 +78,7 @@ def plot_results(df_res,target_field,region_value, fit_samples, filename='p1.png
     beta_std=np.round(fit_samples['beta'].std(),3)
     t0_mean=np.round(fit_samples['t0'].mean(),3)
     t0_std=np.round(fit_samples['t0'].std(),3)
-    print (f'Model parameters: alpha={alpha_mean} (sd:{alpha_std}, beta={beta_mean}(sd:{beta_std}),\
+    print (f'Model parameters: alpha={alpha_mean} (sd:{alpha_std}), beta={beta_mean}(sd:{beta_std}),\
     t0={t0_mean}(sd:{t0_std})')
     alpha_samples=np.round(pd.Series(fit_samples['alpha']),3)
     alpha_samples.plot(kind='density', 
