@@ -126,7 +126,10 @@ def get_prediction(df,n_days_predict=25, target_field='cases',
     plot_results(df_res,target_field,region_value,fit_samples, img_file_name)
     return(df_res)
     
-def get_regions_prediction(df,region_list,region_field=region_field,target_field='cases',img_dir=img_dir):
+def get_regions_prediction(df,region_list,n_days_predict=25, 
+    region_field=region_field,target_field='cases',img_dir=img_dir):
     for i in region_list:
         print (f'\n{i}:')
-        df_res=get_prediction(df,n_days_predict=25, target_field=target_field,region_value=i)
+        df_res=get_prediction(df,n_days_predict=n_days_predict, target_field=target_field, 
+        region_field=region_field,region_value=i,
+        img_file_name=img_dir+'/'+target_field+'_'+i+'.png')
